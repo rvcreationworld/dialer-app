@@ -1,4 +1,0 @@
-#Sun Aug 02 00:14:14 IST 2026
-base.0=/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
