@@ -139,7 +139,7 @@ fun DialerBottomNavigation(navController: NavHostController) {
         )
         NavIconItem(
             icon = Icons.Default.Assignment,
-            label = "Tasks",
+            label = "Bot Tasks",
             isSelected = currentRoute == Screen.TASKS.name,
             onClick = {
                 if (currentRoute != Screen.TASKS.name) {

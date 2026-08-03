@@ -82,7 +82,7 @@ fun MyTasksScreen(viewModel: MyTasksViewModel = viewModel()) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("My Tasks", fontWeight = FontWeight.Bold) },
+                title = { Text("Bot Tasks", fontWeight = FontWeight.Bold) },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.background
                 ),
