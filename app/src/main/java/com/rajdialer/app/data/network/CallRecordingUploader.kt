@@ -29,10 +29,10 @@ object CallRecordingUploader {
         uri: Uri,
         token: String,
         baseUrl: String
-    ): Boolean = withContext(Dispatchers.IO) {
+    ): Pair<Boolean, String> = withContext(Dispatchers.IO) {
         try {
             // 1. Create a temporary file from the content URI
-            val tempFile = getFileFromUri(context, uri) ?: return@withContext false
+            val tempFile = getFileFromUri(context, uri) ?: return@withContext Pair(false, "Could not open file")
 
             // 2. Build the Multipart request
             val requestBody = MultipartBody.Builder()
@@ -59,18 +59,30 @@ object CallRecordingUploader {
                 tempFile.delete()
             }
 
+            val body = response.body?.string()
+
             if (response.isSuccessful) {
                 Log.d("CallRecordingUploader", "Upload successful")
-                return@withContext true
+                return@withContext Pair(true, "Recording uploaded successfully")
             } else {
                 Log.e("CallRecordingUploader", "Upload failed: ${response.code} ${response.message}")
-                val body = response.body?.string()
                 Log.e("CallRecordingUploader", "Error body: $body")
-                return@withContext false
+                var errorMsg = "Failed to upload"
+                try {
+                    if (body != null) {
+                        val json = org.json.JSONObject(body)
+                        if (json.has("message")) {
+                            errorMsg = json.getString("message")
+                        }
+                    }
+                } catch (e: Exception) {
+                    // Ignore JSON parsing errors
+                }
+                return@withContext Pair(false, errorMsg)
             }
         } catch (e: Exception) {
             Log.e("CallRecordingUploader", "Exception during upload", e)
-            return@withContext false
+            return@withContext Pair(false, e.localizedMessage ?: "Unknown error")
         }
     }
 

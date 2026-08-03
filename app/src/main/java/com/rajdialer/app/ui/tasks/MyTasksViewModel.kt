@@ -244,13 +244,13 @@ class MyTasksViewModel(application: Application) : AndroidViewModel(application)
         }.sortedBy { it.timestamp }
     }
 
-    fun uploadRecording(context: android.content.Context, taskId: Int, uri: android.net.Uri, onComplete: (Boolean) -> Unit) {
+    fun uploadRecording(context: android.content.Context, taskId: Int, uri: android.net.Uri, onComplete: (Boolean, String) -> Unit) {
         viewModelScope.launch {
             try {
                 _isLoading.value = true
                 val token = prefs.jwtToken
                 val baseUrl = prefs.baseUrl
-                val success = com.rajdialer.app.data.network.CallRecordingUploader.uploadRecording(context, taskId, uri, token, baseUrl)
+                val (success, message) = com.rajdialer.app.data.network.CallRecordingUploader.uploadRecording(context, taskId, uri, token, baseUrl)
                 if (success) {
                     val currentTasks = _tasks.value.toMutableList()
                     val index = currentTasks.indexOfFirst { it.id == taskId }
@@ -258,14 +258,14 @@ class MyTasksViewModel(application: Application) : AndroidViewModel(application)
                         currentTasks[index] = currentTasks[index].copy(isRecordingSent = true)
                         _tasks.value = currentTasks
                     }
-                    onComplete(true)
+                    onComplete(true, message)
                 } else {
-                    _errorMessage.value = "Failed to upload recording"
-                    onComplete(false)
+                    _errorMessage.value = message
+                    onComplete(false, message)
                 }
             } catch (e: Exception) {
-                _errorMessage.value = e.message
-                onComplete(false)
+                _errorMessage.value = e.message ?: "Error"
+                onComplete(false, e.localizedMessage ?: "Unknown error")
             } finally {
                 _isLoading.value = false
             }

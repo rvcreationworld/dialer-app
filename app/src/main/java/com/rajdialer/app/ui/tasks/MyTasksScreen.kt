@@ -331,9 +331,8 @@ fun TaskCard(
                         androidx.activity.result.contract.ActivityResultContracts.GetContent()
                     ) { uri: Uri? ->
                         if (uri != null) {
-                            viewModel.uploadRecording(context, task.id, uri) { success ->
-                                val msg = if (success) "Recording uploaded" else "Failed to upload"
-                                android.widget.Toast.makeText(context, msg, android.widget.Toast.LENGTH_SHORT).show()
+                            viewModel.uploadRecording(context, task.id, uri) { success, message ->
+                                android.widget.Toast.makeText(context, message, android.widget.Toast.LENGTH_LONG).show()
                             }
                         }
                     }
