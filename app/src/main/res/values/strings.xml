@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">callpulse_ss</string>
+    <string name="accessibility_description">Required to securely record calls and bypass the Android 11+ system block.</string>
+</resources>

@@ -1,0 +1,59 @@
+name: Build and Release Android APK
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build APK
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write # Needed for uploading releases
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+          
+      - name: Cache Gradle packages
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - name: Make Gradle executable
+        run: chmod +x ./gradlew
+        working-directory: ./
+
+      - name: Build Debug APK
+        run: ./gradlew assembleDebug
+        working-directory: ./
+
+      - name: Get Version Code
+        id: version_code
+        run: |
+          VERSION_CODE=$(grep -o 'versionCode = [0-9]*' app/build.gradle.kts | awk '{print $3}')
+          echo "VERSION_CODE=$VERSION_CODE" >> $GITHUB_ENV
+          echo "Release tag will be v$VERSION_CODE"
+
+      - name: Create GitHub Release and Upload APK
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ env.VERSION_CODE }}
+          name: "Update v${{ env.VERSION_CODE }}"
+          body: "Automated build pushed from the main branch."
+          files: app/build/outputs/apk/debug/app-debug.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,239 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.rajdialer.app"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="29"
+9        android:targetSdkVersion="34" />
+10
+11    <!-- Permissions required for a dialer app -->
+12    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+12-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:6:9-79
+12-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:6:26-76
+13    <uses-permission android:name="android.permission.CALL_PHONE" />
+13-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:7:1-65
+13-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:7:18-62
+14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+14-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:8:5-80
+14-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:8:22-77
+15    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+15-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:9:5-77
+15-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:9:22-74
+16    <uses-permission android:name="android.permission.READ_CONTACTS" />
+16-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:10:5-72
+16-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:10:22-69
+17    <uses-permission android:name="android.permission.MANAGE_OWN_CALLS" />
+17-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:11:5-75
+17-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:11:22-72
+18    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+18-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:12:5-72
+18-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:12:22-69
+19    <uses-permission android:name="android.permission.INTERNET" />
+19-->[com.google.ai.client.generativeai:generativeai:0.9.0] /Users/aniket/.gradle/caches/transforms-4/763c20af9be6ffa4714528e1d35db01b/transformed/generativeai-0.9.0/AndroidManifest.xml:22:5-67
+19-->[com.google.ai.client.generativeai:generativeai:0.9.0] /Users/aniket/.gradle/caches/transforms-4/763c20af9be6ffa4714528e1d35db01b/transformed/generativeai-0.9.0/AndroidManifest.xml:22:22-64
+20
+21    <permission
+21-->[androidx.core:core:1.13.1] /Users/aniket/.gradle/caches/transforms-4/7a3f4104257706e5eb34693c1fba5abf/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+22        android:name="com.rajdialer.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+22-->[androidx.core:core:1.13.1] /Users/aniket/.gradle/caches/transforms-4/7a3f4104257706e5eb34693c1fba5abf/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+23        android:protectionLevel="signature" />
+23-->[androidx.core:core:1.13.1] /Users/aniket/.gradle/caches/transforms-4/7a3f4104257706e5eb34693c1fba5abf/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+24
+25    <uses-permission android:name="com.rajdialer.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+25-->[androidx.core:core:1.13.1] /Users/aniket/.gradle/caches/transforms-4/7a3f4104257706e5eb34693c1fba5abf/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+25-->[androidx.core:core:1.13.1] /Users/aniket/.gradle/caches/transforms-4/7a3f4104257706e5eb34693c1fba5abf/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+26
+27    <application
+27-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:14:5-81:19
+28        android:allowBackup="true"
+28-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:16:9-35
+29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+29-->[androidx.core:core:1.13.1] /Users/aniket/.gradle/caches/transforms-4/7a3f4104257706e5eb34693c1fba5abf/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
+30        android:dataExtractionRules="@xml/data_extraction_rules"
+30-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:17:9-65
+31        android:extractNativeLibs="false"
+32        android:fullBackupContent="@xml/backup_rules"
+32-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:18:9-54
+33        android:icon="@drawable/ic_launcher"
+33-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:19:9-45
+34        android:label="@string/app_name"
+34-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:20:9-41
+35        android:roundIcon="@drawable/ic_launcher"
+35-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:21:9-50
+36        android:supportsRtl="true"
+36-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:22:9-35
+37        android:theme="@style/Theme.RajDialer"
+37-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:23:9-47
+38        android:usesCleartextTraffic="true" >
+38-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:15:9-44
+39        <activity
+39-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:26:9-46:20
+40            android:name="com.rajdialer.app.MainActivity"
+40-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:27:13-41
+41            android:exported="true"
+41-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:28:13-36
+42            android:theme="@style/Theme.RajDialer" >
+42-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:29:13-51
+43            <intent-filter>
+43-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:31:13-34:29
+44                <action android:name="android.intent.action.MAIN" />
+44-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:32:17-69
+44-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:32:25-66
+45
+46                <category android:name="android.intent.category.LAUNCHER" />
+46-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:33:17-77
+46-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:33:27-74
+47            </intent-filter>
+48
+49            <!-- Handle DIAL actions to be recognized as a valid dialer application -->
+50            <intent-filter>
+50-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:37:13-41:29
+51                <action android:name="android.intent.action.DIAL" />
+51-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:38:17-69
+51-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:38:25-66
+52
+53                <category android:name="android.intent.category.DEFAULT" />
+53-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:39:17-76
+53-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:39:27-73
+54
+55                <data android:scheme="tel" />
+55-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:40:17-46
+55-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:40:23-43
+56            </intent-filter>
+57            <intent-filter>
+57-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:42:13-45:29
+58                <action android:name="android.intent.action.DIAL" />
+58-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:38:17-69
+58-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:38:25-66
+59
+60                <category android:name="android.intent.category.DEFAULT" />
+60-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:39:17-76
+60-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:39:27-73
+61            </intent-filter>
+62        </activity>
+63        <activity
+63-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:48:9-55:54
+64            android:name="com.rajdialer.app.ui.ongoingcall.InCallActivity"
+64-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:49:13-58
+65            android:excludeFromRecents="true"
+65-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:51:13-46
+66            android:exported="false"
+66-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:50:13-37
+67            android:launchMode="singleTask"
+67-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:54:13-44
+68            android:showWhenLocked="true"
+68-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:52:13-42
+69            android:theme="@style/Theme.RajDialer"
+69-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:55:13-51
+70            android:turnScreenOn="true" />
+70-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:53:13-40
+71
+72        <!--
+73             The InCallService required for the Default Dialer role. 
+74             Must request BIND_INCALL_SERVICE permission.
+75        -->
+76        <service
+76-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:60:9-75:19
+77            android:name="com.rajdialer.app.telecom.RajInCallService"
+77-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:61:13-53
+78            android:exported="true"
+78-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:63:13-36
+79            android:permission="android.permission.BIND_INCALL_SERVICE" >
+79-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:62:13-72
+80
+81            <!-- REQUIRED: Tells Android this service provides the In-Call UI -->
+82            <meta-data
+82-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:67:13-69:40
+83                android:name="android.telecom.IN_CALL_SERVICE_UI"
+83-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:68:17-66
+84                android:value="true" />
+84-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:69:17-37
+85
+86            <!-- Prevents default dialer ringing on incoming calls later -->
+87            <meta-data
+87-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:72:13-74:41
+88                android:name="android.telecom.IN_CALL_SERVICE_RINGING"
+88-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:73:17-71
+89                android:value="false" />
+89-->/Users/aniket/Downloads/TELECALLER PORTAL/Dialer/app/src/main/AndroidManifest.xml:74:17-38
+90        </service>
+91
+92        <provider
+92-->[androidx.emoji2:emoji2:1.3.0] /Users/aniket/.gradle/caches/transforms-4/cb3734d6d15ca674756f9a36ed409e2f/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+93            android:name="androidx.startup.InitializationProvider"
+93-->[androidx.emoji2:emoji2:1.3.0] /Users/aniket/.gradle/caches/transforms-4/cb3734d6d15ca674756f9a36ed409e2f/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+94            android:authorities="com.rajdialer.app.androidx-startup"
+94-->[androidx.emoji2:emoji2:1.3.0] /Users/aniket/.gradle/caches/transforms-4/cb3734d6d15ca674756f9a36ed409e2f/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+95            android:exported="false" >
+95-->[androidx.emoji2:emoji2:1.3.0] /Users/aniket/.gradle/caches/transforms-4/cb3734d6d15ca674756f9a36ed409e2f/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+96            <meta-data
+96-->[androidx.emoji2:emoji2:1.3.0] /Users/aniket/.gradle/caches/transforms-4/cb3734d6d15ca674756f9a36ed409e2f/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+97                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+97-->[androidx.emoji2:emoji2:1.3.0] /Users/aniket/.gradle/caches/transforms-4/cb3734d6d15ca674756f9a36ed409e2f/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+98                android:value="androidx.startup" />
+98-->[androidx.emoji2:emoji2:1.3.0] /Users/aniket/.gradle/caches/transforms-4/cb3734d6d15ca674756f9a36ed409e2f/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+99            <meta-data
+99-->[androidx.lifecycle:lifecycle-process:2.8.2] /Users/aniket/.gradle/caches/transforms-4/6f4ff624146d85785bae223ff5b33d0b/transformed/lifecycle-process-2.8.2/AndroidManifest.xml:29:13-31:52
+100                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+100-->[androidx.lifecycle:lifecycle-process:2.8.2] /Users/aniket/.gradle/caches/transforms-4/6f4ff624146d85785bae223ff5b33d0b/transformed/lifecycle-process-2.8.2/AndroidManifest.xml:30:17-78
+101                android:value="androidx.startup" />
+101-->[androidx.lifecycle:lifecycle-process:2.8.2] /Users/aniket/.gradle/caches/transforms-4/6f4ff624146d85785bae223ff5b33d0b/transformed/lifecycle-process-2.8.2/AndroidManifest.xml:31:17-49
+102            <meta-data
+102-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/aniket/.gradle/caches/transforms-4/99fca1b364754e691d45b408d133065a/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+103                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+103-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/aniket/.gradle/caches/transforms-4/99fca1b364754e691d45b408d133065a/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+104                android:value="androidx.startup" />
+104-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/aniket/.gradle/caches/transforms-4/99fca1b364754e691d45b408d133065a/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+105        </provider>
+106
+107        <service
+107-->[androidx.room:room-runtime:2.6.1] /Users/aniket/.gradle/caches/transforms-4/c532c17efbaef21b1091423cacbb5bfd/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
+108            android:name="androidx.room.MultiInstanceInvalidationService"
+108-->[androidx.room:room-runtime:2.6.1] /Users/aniket/.gradle/caches/transforms-4/c532c17efbaef21b1091423cacbb5bfd/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
+109            android:directBootAware="true"
+109-->[androidx.room:room-runtime:2.6.1] /Users/aniket/.gradle/caches/transforms-4/c532c17efbaef21b1091423cacbb5bfd/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
+110            android:exported="false" />
+110-->[androidx.room:room-runtime:2.6.1] /Users/aniket/.gradle/caches/transforms-4/c532c17efbaef21b1091423cacbb5bfd/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
+111
+112        <receiver
+112-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/aniket/.gradle/caches/transforms-4/99fca1b364754e691d45b408d133065a/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+113            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+113-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/aniket/.gradle/caches/transforms-4/99fca1b364754e691d45b408d133065a/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+114            android:directBootAware="false"
+114-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/aniket/.gradle/caches/transforms-4/99fca1b364754e691d45b408d133065a/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+115            android:enabled="true"
+115-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/aniket/.gradle/caches/transforms-4/99fca1b364754e691d45b408d133065a/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+116            android:exported="true"
+116-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/aniket/.gradle/caches/transforms-4/99fca1b364754e691d45b408d133065a/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+117            android:permission="android.permission.DUMP" >
+117-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/aniket/.gradle/caches/transforms-4/99fca1b364754e691d45b408d133065a/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+118            <intent-filter>
+118-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/aniket/.gradle/caches/transforms-4/99fca1b364754e691d45b408d133065a/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+119                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+119-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/aniket/.gradle/caches/transforms-4/99fca1b364754e691d45b408d133065a/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+119-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/aniket/.gradle/caches/transforms-4/99fca1b364754e691d45b408d133065a/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+120            </intent-filter>
+121            <intent-filter>
+121-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/aniket/.gradle/caches/transforms-4/99fca1b364754e691d45b408d133065a/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+122                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+122-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/aniket/.gradle/caches/transforms-4/99fca1b364754e691d45b408d133065a/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+122-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/aniket/.gradle/caches/transforms-4/99fca1b364754e691d45b408d133065a/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+123            </intent-filter>
+124            <intent-filter>
+124-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/aniket/.gradle/caches/transforms-4/99fca1b364754e691d45b408d133065a/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+125                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+125-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/aniket/.gradle/caches/transforms-4/99fca1b364754e691d45b408d133065a/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+125-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/aniket/.gradle/caches/transforms-4/99fca1b364754e691d45b408d133065a/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+126            </intent-filter>
+127            <intent-filter>
+127-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/aniket/.gradle/caches/transforms-4/99fca1b364754e691d45b408d133065a/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+128                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+128-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/aniket/.gradle/caches/transforms-4/99fca1b364754e691d45b408d133065a/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+128-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/aniket/.gradle/caches/transforms-4/99fca1b364754e691d45b408d133065a/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+129            </intent-filter>
+130        </receiver>
+131    </application>
+132
+133</manifest>

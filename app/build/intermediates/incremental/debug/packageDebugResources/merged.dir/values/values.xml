@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="accessibility_description">Required to securely record calls and bypass the Android 11+ system block.</string>
+    <string name="app_name">callpulse_ss</string>
+    <style name="Theme.RajDialer" parent="android:Theme.Material.Light.NoActionBar"/>
+</resources>
